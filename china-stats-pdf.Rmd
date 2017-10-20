@@ -1,0 +1,28 @@
+---
+title: "China stats"
+author: "Johan Askehave"
+date: "10/20/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Some energy stats
+<br>
+
+#### This is a table
+<br>
+
+```{r, echo = FALSE}
+kable(df_data_excel, align = 'c', format.args = list(big.mark = ","))
+```
+<br>
+
+#### This is a plot
+<br>
+```{r, echo = FALSE, warning = FALSE, fig.height = 4}
+p_ggplot_excel
+```

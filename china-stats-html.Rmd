@@ -1,0 +1,29 @@
+---
+title: "China stats"
+author: "Johan Askehave"
+date: "10/20/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Some energy stats
+<br>
+
+#### This is a table
+<br>
+
+```{r, echo = FALSE}
+df_table_show <- df_data_wiki %>% t() %>% as_tibble() %>% set_colnames(.[1,]) %>% slice(2)
+kable(df_table_show, align = 'c', format.args = list(big.mark = ","))
+```
+<br>
+
+#### This is a plot
+<br>
+```{r, echo=FALSE}
+p_plotly_wiki
+```
