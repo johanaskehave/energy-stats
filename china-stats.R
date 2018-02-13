@@ -34,7 +34,7 @@ df_data_wiki <- tibble(year = i_years, mw = dd_capacity)
 # Create plot -------------------------------------------------------------
 
 p_plotly_wiki <- df_data_wiki %>%
-  plot_ly(x = ~year, y = ~mw, type = "bar")
+  plot_ly(x = ~year, y = ~mw, type = "bar", color = I("black"))
 
 
 # We can also read your Excel data ----------------------------------------
